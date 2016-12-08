@@ -900,13 +900,13 @@ var i = 0;
 
 if(relatedTitles.length>0)
 
-document.write('<ul id="related-posts">');
+document.write('<nav class="listnew"><ul>');
 while (i < relatedTitles.length && i < 180 && i<maxresults) {
  var trtd='<li class="col-lg-12 col-md-12 col-xs-6 col-sm-6">';
-trtd+='    <div class="left-block  ">';
-      trtd+='  <h5 class="product-name"><a href="'+ relatedUrls[r] + '"> '+relatedTitles[r]+' </a></h5>';
+trtd+=' <i class="fa fa-circle"></i>';
+      trtd+=' <a href="'+ relatedUrls[r] + '"> '+relatedTitles[r]+' </a>';
        
- trtd+='   </div>';
+ 
 trtd+=' </li>';
 document.write(trtd);
 i++;
@@ -918,7 +918,7 @@ r = 0;
 }
 
 }
-document.write('</ul>');
+document.write('</ul><nav>');
 relatedUrls.splice(0,relatedUrls.length);
 thumburl.splice(0,thumburl.length);
 giaca.splice(0,giaca.length);
