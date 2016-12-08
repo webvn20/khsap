@@ -1046,7 +1046,7 @@ trtd+='                                <div class="row">';
             trtd+='                                      </a>';
              trtd+='                                     <div class="date">';
               trtd+='                                        <i class="fa fa-calendar"></i>                                        </div>';
-               trtd+='                                   <p' +stripHtmlTags(content,summary)+'...<a href="'+posturl+'"> đọc nữa .</a></p>';
+               trtd+='                                   <p>' +stripHtmlTags(content,summary)+'...<a href="'+posturl+'"> đọc nữa .</a></p>';
                 trtd+='                              </div>';
                  trtd+='                         </div>      ';                 
                    trtd+='                   </article>';
