@@ -1,6 +1,6 @@
       //<![CDATA[
 
-      simpleCart({
+           simpleCart({
     cartStyle: "div", 
         //Setting the Cart Columns for the sidebar cart display.
         cartColumns: [
@@ -1028,16 +1028,34 @@ var noimg='https://ugotalksalot.files.wordpress.com/2016/06/no-thumb.jpg'
           var img = div.getElementsByTagName("img");
           var summ = summary;
           if(img.length>=1) { 
-            imgtag = '<div class="thumb col-md-4 col-xs-12"><a href="'+posturl+'"><img width="100%" height="120" src="'+img[0].src+'"></a></div>';
+            imgtag = img[0].src;
           }
           else{
-            imgtag = '<div class="thumb col-md-4 col-xs-12"><a href="'+posturl+'"><img width="100%" height="120" src="'+noimg+'"></a></div>';
+            imgtag = noimg ;
           }
-          var summary1 = '<div class="archive col-md-12 col-xs-12"><h2><a href="'+posturl+'">'+title+'</a></h2>'+imgtag+'<div class="archiveright col-md-8 col-xs-12">'+stripHtmlTags(content,summary)+'...<a href="'+posturl+'"> đọc nữa .</a></div><div class="clear"></div></div><hr/>';
-          div.innerHTML = summary1;
+var trtd='<article class="itemblog">';
+trtd+='                                <div class="row">';
+    trtd+='                                          <div class="img-blog img-blog col-lg-4 col-md-4 col-sm-4 col-xs-12">';
+      trtd+='                                            <a href="'+posturl+'" title="">';
+       trtd+='                                               <img src="'+imgtag+'" alt="">';
+        trtd+='                                          </a>';
+                         trtd+='                     </div>';
+          trtd+='                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">';
+           trtd+='                                       <a  href="'+posturl+'" title="'+title+'">';
+            trtd+='                                          <h2 class="fbebas">'+title+'</h2>';
+            trtd+='                                      </a>';
+             trtd+='                                     <div class="date">';
+              trtd+='                                        <i class="fa fa-calendar"></i>                                        </div>';
+               trtd+='                                   <p' +stripHtmlTags(content,summary)+'...<a href="'+posturl+'"> đọc nữa .</a>+'</p>';
+                trtd+='                              </div>';
+                 trtd+='                         </div>      ';                 
+                   trtd+='                   </article>';
+
+          div.innerHTML = trtd;
           div.style.display = "block";
         }
       }
 
-//]]>
+
+   //]]>
    
