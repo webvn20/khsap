@@ -900,7 +900,7 @@ var i = 0;
 
 if(relatedTitles.length>0)
 
-document.write('<nav class="listnew"><ul>');
+document.write('<section class="news clearfix"><div class="itemnews"><nav class="listnew"><ul>');
 while (i < relatedTitles.length && i < 180 && i<maxresults) {
  var trtd='<li class="col-lg-12 col-md-12 col-xs-6 col-sm-6">';
 trtd+=' <i class="fa fa-circle"></i>';
@@ -918,7 +918,7 @@ r = 0;
 }
 
 }
-document.write('</ul><nav>');
+document.write('</ul><nav></div></section>');
 relatedUrls.splice(0,relatedUrls.length);
 thumburl.splice(0,thumburl.length);
 giaca.splice(0,giaca.length);
