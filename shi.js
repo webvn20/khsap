@@ -903,8 +903,8 @@ if(relatedTitles.length>0)
 document.write('<section class="news clearfix"><div class="itemnews"><nav class="listnew"><ul>');
 while (i < relatedTitles.length && i < 180 && i<maxresults) {
  var trtd='<li class="col-lg-12 col-md-12 col-xs-6 col-sm-6">';
-trtd+=' <i class="fa fa-circle"></i>';
-      trtd+=' <a href="'+ relatedUrls[r] + '"> '+relatedTitles[r]+' </a>';
+trtd+=' <a href="'+ relatedUrls[r] + '"> <i class="fa fa-circle"></i>';
+      trtd+='  '+relatedTitles[r]+' </a>';
        
  
 trtd+=' </li>';
