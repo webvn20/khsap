@@ -585,9 +585,11 @@ var noidungtintuc=t+tintuc;
 function newslienquan(e) {
         j = showRandomImg ? Math.floor((imgr.length + 1) * Math.random()) : 0;
         img = [];
+            document.write('<nav class="listnew"><ul>');
+
         for (var t = 0; t < 15; t++) {
           if(t == 0){
-            document.write('<ul class="list">');
+
           }
           var n = e.feed.entry[t]
           , r = n.title.$t
@@ -626,6 +628,8 @@ function newslienquan(e) {
           document.write(r);
           j++
         }
+                    document.write('</ul></nav>');
+
       }
 
 
@@ -1039,14 +1043,14 @@ trtd+='                                <div class="row">';
       trtd+='                                            <a href="'+posturl+'" title="">';
        trtd+='                                               <img src="'+imgtag+'" alt="">';
         trtd+='                                          </a>';
-                         trtd+='                     </div>';
+        trtd+='                     </div>';
           trtd+='                                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">';
            trtd+='                                       <a  href="'+posturl+'" title="'+title+'">';
             trtd+='                                          <h2 class="fbebas">'+title+'</h2>';
             trtd+='                                      </a>';
              trtd+='                                     <div class="date">';
-              trtd+='                                        <i class="fa fa-calendar"></i>                                        </div>';
-               trtd+='                                   <p>' +stripHtmlTags(content,summary)+'...<a href="'+posturl+'"> đọc nữa .</a></p>';
+              trtd+='                                        <i class="fa fa-calendar"></i>    '+date+'                                    </div>';
+               trtd+='                                   <p' +stripHtmlTags(content,summary)+'...<a href="'+posturl+'"> đọc nữa .</a></p>';
                 trtd+='                              </div>';
                  trtd+='                         </div>      ';                 
                    trtd+='                   </article>';
