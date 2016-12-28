@@ -719,7 +719,7 @@ mot3=s.substr(mot1+6,mot2-mot1-6);
 
 if((mot1!=-1)&&(mot2!=-1)&&(mot3!=""))
 {
-motalq[relatedTitlesNum]=mot3;
+motalq[relatedTitlesNum]=stripHtmlTags(removeHtmlTag(mot3,80),80);
 }
 
 
