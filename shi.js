@@ -853,7 +853,7 @@ var giacut=giacu[r];
              trtd+='   </div>';
             trtd+='    <h3><a href="'+posturl+'" title="">'+title+'</a>';
             trtd+='</h3>';
-              trtd+='  <p>'+stripHtmlTags(motat,80)+'</p>           </div>       </div>';
+              trtd+='  <p>'+motat+'</p>           </div>       </div>';
 
 
 
